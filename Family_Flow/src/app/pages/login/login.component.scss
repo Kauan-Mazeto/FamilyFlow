@@ -14,7 +14,7 @@
 
         h1{
             font-family: $fonte-titulo;
-            font-size: $fonte-titulo-grande;
+            font-size: 2px;
             color: $cor-branco;
             margin-bottom: 2rem;
         }
@@ -38,7 +38,7 @@
 
         h1 {
             font-family: $fonte-titulo;
-            font-size: $fonte-titulo-grande;
+            font-size: 2rem;
             margin-bottom: 5rem;
             margin-top: 10rem;
         }
@@ -59,11 +59,12 @@
             }
 
             input{
-                padding: $espacamento-md;
+                padding: 1rem;
                 font-size: $fonte-pequena;
                 border: 2px solid $cor-cinza-medio;
                 border-radius: 4px;
                 background-color: transparent;
+                cursor: pointer;
                 
                 &:focus {
                     outline: none;
@@ -73,7 +74,7 @@
             }
 
             button{
-                padding: $espacamento-md;
+                padding: 1rem;
                 font-size: $fonte-normal;
                 background-color: rgb(29, 86, 255);
                 color: $cor-branco;
@@ -102,6 +103,7 @@
                     color: $cor-secundaria;
                     text-decoration: none;
                     font-weight: 600;
+                    cursor: pointer;
 
                     &:hover {
                         text-decoration: underline;

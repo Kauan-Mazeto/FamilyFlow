@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,8 @@ export class LoginComponent implements OnInit {
   email_error: string = '';
   password_error: string = '';
   is_loading: boolean = false;
+
+  navegador = inject(Router);
 
   // Usuários mockados para teste
   private valid_users = [
@@ -83,6 +86,7 @@ export class LoginComponent implements OnInit {
       if (this.validate_credentials(this.email, this.password)) {
         alert('Login realizado com sucesso!');
         console.log('Usuário logado:', this.email);
+
       } else {
         this.error_message = 'Email ou senha incorretos';
       }
@@ -119,6 +123,10 @@ export class LoginComponent implements OnInit {
     } else {
       this.password_error = '';
     }
+  }
+
+  navigate_to_register() {
+    this.navegador.navigate(['/register']);
   }
 
 }
