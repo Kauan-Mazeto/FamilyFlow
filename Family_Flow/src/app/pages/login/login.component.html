@@ -1,6 +1,3 @@
-<div class="boas-vindas">
-</div>
-
 <div class="div-login">
   <h1>Faça Login para Continuar</h1>
 
@@ -9,7 +6,7 @@
     {{ error_message }}
   </div>
 
-  <form (ngSubmit)="on_login()" #loginForm="ngForm">
+  <form (ngSubmit)="on_login()" #loginForm="ngForm" method="post">
 
     <div *ngIf="email_error" class="field-error">
       {{ email_error }}

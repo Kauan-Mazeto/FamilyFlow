@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   
-  // Propriedades para o formulário
+  formBuilder = inject(FormBuilder);
+
+  loginForm = this.formBuilder.group({
+    email: [''],
+    password: ['']
+  });
+
   email: string = '';
   password: string = '';
   error_message: string = '';
